@@ -2,7 +2,7 @@ HW-1 1/22/2026
 
 Chris Dougherty
 
-This program is a test of knowledge of a sonnet
+This program is a test of knowledge of a given sonnet array
 
 The program takes 0 arguments
 
