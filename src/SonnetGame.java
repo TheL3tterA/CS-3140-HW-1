@@ -22,15 +22,15 @@ public class SonnetGame {
         }
     }
 
-    public int printSonnetAndReturnCorrectWordIndex() {
-        int randomNum = rand.nextInt(words.length);
-        String correctGuess = words[randomNum];
+    public int returnCorrectWordIndex() {
+        return rand.nextInt(words.length);
+    }
 
+    public void printSonnet(int randomNum) {
         // copy the array to a new sliced array then join every word together
         String[] copyOfSonnet = Arrays.copyOfRange(words, 0, randomNum);
         String sonnetToPrint = String.join(" ", copyOfSonnet);
         IO.println(sonnetToPrint);
-        return randomNum;
     }
 
     public boolean isGameOver() {
@@ -38,7 +38,7 @@ public class SonnetGame {
     }
 
     public void printGameOver() {
-        if (userCorrect == 3) {
+        if (userCorrect >= 3) {
             IO.println("You won! Thanks for playing!");
         }
         else {

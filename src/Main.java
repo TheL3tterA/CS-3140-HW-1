@@ -19,19 +19,20 @@ public class Main {
                 "What", "here", "shall", "miss,", "our", "toil", "shall", "strive", "to", "mend."
         };
 
-        SonnetGame test = new SonnetGame(sonnetWords);
+        SonnetGame game = new SonnetGame(sonnetWords);
         Scanner input = new Scanner(System.in);
 
-        while (!test.isGameOver()) {
-            int correctWord = test.printSonnetAndReturnCorrectWordIndex();
+        while (!game.isGameOver()) {
+            int correctWord = game.returnCorrectWordIndex();
+            game.printSonnet(correctWord);
             IO.println("What is the missing word?");
 
             IO.println(sonnetWords[correctWord]);
 
             String userGuess = input.nextLine();
-            test.playRound(userGuess, correctWord);
+            game.playRound(userGuess, correctWord);
         }
 
-        test.printGameOver();
+        game.printGameOver();
     }
 }
