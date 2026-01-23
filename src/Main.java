@@ -25,9 +25,6 @@ public class Main {
         while (!game.isGameOver()) {
             int correctWord = game.returnCorrectWordIndex();
             game.printSonnet(correctWord);
-            IO.println("What is the missing word?");
-
-            IO.println(sonnetWords[correctWord]);
 
             String userGuess = input.nextLine();
             game.playRound(userGuess, correctWord);

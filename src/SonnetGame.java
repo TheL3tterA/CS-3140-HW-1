@@ -31,6 +31,9 @@ public class SonnetGame {
         String[] copyOfSonnet = Arrays.copyOfRange(words, 0, randomNum);
         String sonnetToPrint = String.join(" ", copyOfSonnet);
         IO.println(sonnetToPrint);
+
+        IO.println("_".repeat(words[randomNum].length()));
+        IO.println("What is the missing word?");
     }
 
     public boolean isGameOver() {
